@@ -3,7 +3,9 @@
 #Now we build relative structures:
 export scripts=$env_mnt/env_scripts
 export backups_logs=$msm_mnt/_BackupsLogs
-export emacs_backups=$backups_logs/_emacs_backups
+export emacs_backups=$backups_logs/backup_emacs
+export emacs_autosaves=$backups_logs/autosave_emacs
+
 export motd=$env_mnt/env_motd
 export wallpapers=$env_mnt/wallpapers
 
@@ -18,6 +20,8 @@ export Notes=$Research/_Notes
 export Writing=$msm_mnt/_Writing
 export server=$Research/_Server
 export doku=$server/dokuwiki/data/pages
+export soft=$msm_mnt/_Software
+
 
 #Include Miniconda3 to get the 'right' python
 export PATH="$installed_1/miniconda3/bin:$PATH"
@@ -26,7 +30,8 @@ export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 
 #The following will be printed
 export _print_paths=("scripts" "Research" "Notes" "Writing"
-                     "rcode" "rpcode" "repos" "Personal" "doku")
+                     "rcode" "rpcode" "repos" "Personal" "doku"
+                     "soft")
 
 #Make symlinks if target does not exist / fix if broken
 function ens_sym_link {
@@ -75,13 +80,17 @@ function ens_sym_link_files {
     cd ${o_pwd}
 }
 
-#Create symbolic links
+# create symbolic links
 rm -rf $HOME/.gitconfig
-ens_sym_link ${env_mnt}/.gitconfig ${HOME}/.gitconfig
+# ens_sym_link ${env_mnt}/.gitconfig ${HOME}/.gitconfig
 
 ens_sym_link_files ${conflink}/.emacs.d ${HOME}/.emacs.d
+ens_sym_link ${emacs_backups} ${HOME}/.emacs.d/backups
+ens_sym_link ${emacs_autosaves} ${HOME}/.emacs.d/autosaves
+
 ens_sym_link_files ${conflink}/.config/devilspie2 ${HOME}/.config/devilspie2
-#dynamically construct symlinks from _print_paths
+
+# dynamically construct symlinks from _print_paths
 for ix in ${!_print_paths[*]}
 do
     v=${_print_paths[$ix]}
@@ -90,7 +99,8 @@ do
     ens_sym_link ${src} ${HOME}/_${tar}
 done
 
-# ens_sym_link ${emacs_backups} ${HOME}/.emacs.d/emacs-backups
+# add some explicit links
+ens_sym_link ${wallpapers} ${HOME}/_wallpapers
 
 
 #This is probably a bad idea..

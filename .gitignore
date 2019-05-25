@@ -37,4 +37,5 @@ _data
 *.bmp
 
 # Ignore any nested repositories
+
 _Environment/dot_files/.emacs.d
