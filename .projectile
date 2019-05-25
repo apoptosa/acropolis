@@ -1,5 +1,7 @@
 - /_data
 - *.png
+- *.jpg
+- *.bmp
 - #*
 - ~*
 - /.cache

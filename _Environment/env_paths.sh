@@ -1,11 +1,11 @@
 #!/bin/bash
 
 #Now we build relative structures:
-export scripts=$env_mnt/_scripts
+export scripts=$env_mnt/env_scripts
 export backups_logs=$msm_mnt/_BackupsLogs
 export emacs_backups=$backups_logs/_emacs_backups
-export motd=$env_mnt/_motd
-export wallpapers=$env_mnt/_wallpapers
+export motd=$env_mnt/env_motd
+export wallpapers=$env_mnt/wallpapers
 
 export installed_1=$msm_mnt/_Applications/_Installed
 export Personal=$msm_mnt/_Personal
@@ -13,8 +13,7 @@ export Research=$msm_mnt/_Research
 export rcode=$Research/_Code
 export rpcode=$Research/_Code/_Python
 export repos=$msm_mnt/_Repositories
-export conflink=$env_mnt/_config_link
-export setlink=$env_mnt/_settings_link
+export conflink=$env_mnt/dot_files
 export Notes=$Research/_Notes
 export Writing=$msm_mnt/_Writing
 export server=$Research/_Server
@@ -80,7 +79,7 @@ function ens_sym_link_files {
 rm -rf $HOME/.gitconfig
 ens_sym_link ${env_mnt}/.gitconfig ${HOME}/.gitconfig
 
-ens_sym_link_files ${setlink}/.emacs.d ${HOME}/.emacs.d
+ens_sym_link_files ${conflink}/.emacs.d ${HOME}/.emacs.d
 ens_sym_link_files ${conflink}/.config/devilspie2 ${HOME}/.config/devilspie2
 #dynamically construct symlinks from _print_paths
 for ix in ${!_print_paths[*]}

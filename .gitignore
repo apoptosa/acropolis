@@ -15,7 +15,6 @@ _data
 
 # data output and visualisation
 
-*.gif
 *.hdf
 *.hdf5
 *.ps
@@ -27,9 +26,15 @@ _data
 *~
 
 # emacs backup
+
 \#*\#
 .\#*
 
+# images
+
+*.jpg
+*.png
+*.bmp
 
 # Ignore any nested repositories
 _Environment/dot_files/.emacs.d
