@@ -1,0 +1,35 @@
+################################################################################
+# File types to be ignored by git
+################################################################################
+
+# Ignore any folder that matches /output
+
+__pycache__
+_data
+.cache
+
+# binary python files and objects
+
+*.pyc
+*.pyo
+
+# data output and visualisation
+
+*.gif
+*.hdf
+*.hdf5
+*.ps
+*.gp
+*fuse_hidden*
+
+# tilde backup files
+
+*~
+
+# emacs backup
+\#*\#
+.\#*
+
+
+# Ignore any nested repositories
+_Environment/dot_files/.emacs.d
