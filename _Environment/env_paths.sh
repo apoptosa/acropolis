@@ -10,16 +10,16 @@ export motd=$env_mnt/env_motd
 export wallpapers=$env_mnt/wallpapers
 
 export installed_1=$msm_mnt/_Applications/_Installed
-export Personal=$msm_mnt/_Personal
-export Research=$msm_mnt/_Research
-export rcode=$Research/_Code
-export rpcode=$Research/_Code/_Python
+export personal=$msm_mnt/_Personal
+export research=$msm_mnt/_Research
+export rcode=$research/_Code
+export rpcode=$research/_Code/_Python
 export repos=$msm_mnt/_Repositories
-export reposF=$msm_mnt/_Repositories/_Foreign
+export reposf=$msm_mnt/_Repositories/_Foreign
 export conflink=$env_mnt/dot_files
-export Notes=$Research/_Notes
-export Writing=$msm_mnt/_Writing
-export server=$Research/_Server
+export notes=$research/_Notes
+export writing=$msm_mnt/_Writing
+export server=$research/_Server
 export doku=$server/dokuwiki/data/pages
 export soft=$msm_mnt/_Software
 
@@ -30,9 +30,9 @@ export PATH="$installed_1/miniconda3/bin:$PATH"
 export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 
 #The following will be printed
-export _print_paths=("scripts" "Research" "Notes" "Writing"
-                     "rcode" "rpcode" "repos" "reposF"
-                     "Personal" "doku" "soft")
+export _print_paths=("scripts" "research" "notes" "writing"
+                     "rcode" "rpcode" "repos" "reposf"
+                     "personal" "doku" "soft")
 
 #Make symlinks if target does not exist / fix if broken
 function ens_sym_link {
@@ -107,7 +107,7 @@ ens_sym_link ${wallpapers} ${HOME}/_wallpapers
 #This is probably a bad idea..
 {
     rm -rf ${HOME}/.ssh/config
-    cp ${Personal}/.ssh/config ${HOME}/.ssh/config
+    cp ${personal}/.ssh/config ${HOME}/.ssh/config
     chown ${USER} ${HOME}/.ssh/config
     chmod 644 ${HOME}/.ssh/config
 } &> /dev/null
