@@ -11,6 +11,7 @@ export wallpapers=$env_mnt/wallpapers
 
 export installed_1=$msm_mnt/_Applications/_Installed
 export personal=$msm_mnt/_Personal
+export paperwork=$msm_mnt/_Personal/_Paperwork
 export research=$msm_mnt/_Research
 export rcode=$research/_Code
 export rpcode=$research/_Code/_Python
@@ -32,7 +33,7 @@ export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 #The following will be printed
 export _print_paths=("scripts" "research" "notes" "writing"
                      "rcode" "rpcode" "repos" "reposf"
-                     "personal" "doku" "soft")
+                     "personal" "paperwork" "doku" "soft")
 
 #Make symlinks if target does not exist / fix if broken
 function ens_sym_link {
