@@ -15,6 +15,7 @@ export Research=$msm_mnt/_Research
 export rcode=$Research/_Code
 export rpcode=$Research/_Code/_Python
 export repos=$msm_mnt/_Repositories
+export reposF=$msm_mnt/_Repositories/_Foreign
 export conflink=$env_mnt/dot_files
 export Notes=$Research/_Notes
 export Writing=$msm_mnt/_Writing
@@ -30,8 +31,8 @@ export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 
 #The following will be printed
 export _print_paths=("scripts" "Research" "Notes" "Writing"
-                     "rcode" "rpcode" "repos" "Personal" "doku"
-                     "soft")
+                     "rcode" "rpcode" "repos" "reposF"
+                     "Personal" "doku" "soft")
 
 #Make symlinks if target does not exist / fix if broken
 function ens_sym_link {
