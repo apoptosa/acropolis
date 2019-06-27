@@ -22,6 +22,7 @@ export notes=$research/_Notes
 export writing=$msm_mnt/_Writing
 export server=$research/_Server
 export doku=$server/dokuwiki/data/pages
+export scan=$msm_mnt/_Scanning
 export soft=$msm_mnt/_Software
 
 
@@ -33,7 +34,7 @@ export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 #The following will be printed
 export _print_paths=("scripts" "research" "notes" "writing"
                      "rcode" "rpcode" "repos" "reposf"
-                     "personal" "paperwork" "doku" "soft")
+                     "personal" "paperwork" "doku" "scan" "soft")
 
 #Make symlinks if target does not exist / fix if broken
 function ens_sym_link {
