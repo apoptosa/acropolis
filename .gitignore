@@ -35,6 +35,7 @@ _data
 *.jpg
 *.png
 *.bmp
+*.tif
 
 # Ignore any nested repositories
 
@@ -42,5 +43,4 @@ _Environment/dot_files/.emacs.d
 
 
 # Ignore private scripts
-
 *.priv.sh

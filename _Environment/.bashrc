@@ -14,3 +14,6 @@ export env_mnt=$rce_mnt/_Environment
 . $env_mnt/env_aliases.sh
 . $env_mnt/env_startup.sh
 
+# private paths and aliases
+. $env_mnt/env_paths.priv.sh
+. $env_mnt/env_aliases.priv.sh
