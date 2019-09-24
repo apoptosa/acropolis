@@ -32,7 +32,8 @@ alias .4='cd ../../../../'
 alias .5='cd ../../../../..'
 
 ## avoid ABI error
-alias gpp='g++ -D_GLIBCXX_USE_CXX11_ABI=0'
+# alias gpp='g++ -D_GLIBCXX_USE_CXX11_ABI=0'
+alias gpp=g++-9
 
 export _print_aliases=("ls" "mkdir" "path" "ports" "grep" "egrep" "fgrep"
                        "neg" "cd" ".." "..."
