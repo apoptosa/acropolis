@@ -17,3 +17,6 @@ export env_mnt=$rce_mnt/_Environment
 # private paths and aliases
 . $env_mnt/env_paths.priv.sh
 . $env_mnt/env_aliases.priv.sh
+
+# application specific
+. $env_mnt/env_app_ccache.sh

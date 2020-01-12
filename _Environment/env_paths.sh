@@ -24,7 +24,7 @@ export server=$research/_Server
 export doku=$server/dokuwiki/data/pages
 export scan=$msm_mnt/_Scanning
 export soft=$msm_mnt/_Software
-
+export NR=$repos/NR
 
 #Include Miniconda3 to get the 'right' python
 export PATH="$installed_1/miniconda3/bin:$PATH"
